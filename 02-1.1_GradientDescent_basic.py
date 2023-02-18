@@ -1,5 +1,10 @@
 # 경사하강법(Gradient Descent)
 # 실제로 훈련 데이터에 맞는 w와 b 찾아보기
+# y = x * w + b 식을 이용한다.
+
+print("가중치(w)와 절편(b)으로 예측값(y_hat)을 만들고 실제 값(y)과 비교하자")
+print("이 방법은 y_hat < y일 경우에만 적용할 수 있다.")
+print("식은 y_hat = x * w + b 이다.")
 
 '''
 이 방법의 문제점
@@ -15,14 +20,10 @@ diabetes = load_diabetes()  # class 'sklearn.utils._bunch.Bunch'
 # 두 속성 모두 numpy 배열
 # 이 데이터의 의미가 무엇인지는 도메인 지식이 필요하므로 다루지 않는다.
 
+
 # 코드를 간단히 쓰기 위해 x, y에 대입
 x = diabetes.data[:, 2]
 y = diabetes.target
-
-print("가중치(w)와 절편(b)으로 예측값(y_hat)을 만들고 실제 값(y)과 비교하자")
-print("이 방법은 y_hat < y일 경우에만 적용할 수 있다.")
-print("식은 y_hat = x[0] * w + b 이다.")
-
 
 # 1. 무작위로 w와 b를 정한다. (무작위로 모델 만들기)
 # 임의의 값으로 시작
